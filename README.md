@@ -110,6 +110,10 @@ difference over the two documents, with **no model anywhere in that code path**.
 layered strictly *on top* of that result, never in place of it. The same instinct as the security work —
 prefer a property you can prove over a behaviour you have to trust.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Fatemeh-Najafi1/Fatemeh-Najafi1/main/assets/resume-match.svg" alt="Animated pipeline: a resume and job posting flow through Reader, Cleaner, Embedder, Comparator and Generator, producing a match score and a set-difference list of missing skills" width="100%" />
+</p>
+
 A five-stage pipeline — **Reader → Cleaner → Embedder → Comparator → Generator** — ingests TXT/DOCX/PDF or
 scrapes a posting straight from a URL, normalizes and lemmatizes both documents, extracts structured metadata
 (GPA, years of experience, contacts), embeds with `all-MiniLM-L6-v2`, and scores cosine similarity. It then
@@ -126,6 +130,10 @@ repeats them.
 
 A full-stack Flask app serving live Dubai weather, a 5-day Chart.js forecast, and filterable events over a REST
 API. The parts I'd point at in review:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Fatemeh-Najafi1/Fatemeh-Najafi1/main/assets/weather-scan.svg" alt="Animated 48-hour forecast scan: a scanner sweeps across hourly bars scoring each slot, then highlights the best outdoor window" width="100%" />
+</p>
 
 - **A cache with a stale fallback** — 10-minute server-side cache, and if OpenWeather is unreachable it serves
   data up to 6 hours old rather than failing the page. Deciding *what to do when the upstream is down* is the
@@ -144,6 +152,10 @@ API. The parts I'd point at in review:
 <img src="https://img.shields.io/badge/vanilla_JS_+_SVG-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="Vanilla JavaScript and SVG" />
 
 Two teaching tools, no frameworks or libraries — just JavaScript and hand-built SVG.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Fatemeh-Najafi1/Fatemeh-Najafi1/main/assets/rabin-karp.svg" alt="Animated Rabin-Karp: a four-character window slides across ABRACADABRA, the rolling hash updates each step, a hash collision triggers a spurious hit, and true matches are found at indices 0 and 7" width="100%" />
+</p>
 
 **Rabin-Karp** makes the *failure mode* the subject. A rolling hash is fast until collisions force character
 verification, and enough collisions drag O(n+m) down to O(n×m). So the visualizer ships a **collision mode
@@ -169,6 +181,10 @@ Greedy side by side — **automatically flagging the inputs where greedy disagre
 
 End-to-end data mining over ~18,800 rows of the NYC Community Air Survey (NO₂, PM2.5, O₃ across 59 community
 districts), asking whether distinct air-quality regimes can be discovered automatically and then predicted.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Fatemeh-Najafi1/Fatemeh-Najafi1/main/assets/clustering.svg" alt="Animated K-means clustering: scattered air-quality readings resolve into three pollution regimes as the centroids converge" width="100%" />
+</p>
 
 Profiling → missing-value handling → **Isolation Forest** outlier removal → **filtering to summer months to
 control for seasonal confounding** → z-score standardization → one-hot encoding → **K-means** (K=3 chosen by
